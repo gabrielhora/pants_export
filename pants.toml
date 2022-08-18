@@ -1,0 +1,18 @@
+[GLOBAL]
+pants_version = "2.12.0"
+backend_packages = [
+    "pants.backend.python",
+    "pants.backend.python.mixed_interpreter_constraints",
+]
+
+[python]
+interpreter_constraints = [">=3.8"]
+enable_resolves = true
+default_resolve = "py38"
+
+[python.resolves]
+py38 = "3rdparty/python/py38.lock"
+py310 = "3rdparty/python/py310.lock"
+
+[anonymous-telemetry]
+enabled = false
